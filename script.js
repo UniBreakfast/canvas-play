@@ -4,7 +4,7 @@ import Director from './Director.js'
 import Block from './Block.js'
 
 
-canvas = new Canvas(canvas, {top: 10, right: 10, bottom: 10, left: 10})
+canvas = new Canvas(canvas, {top: 0, right: 0, bottom: 0, left: 0})
 director = new Director(canvas)
-director.generateBlocks(300)
+director.generateBlocks(600)
 director.start()

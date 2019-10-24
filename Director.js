@@ -16,7 +16,7 @@ export default class Director {
     this.canvas.clear()
     this.blocks.forEach(block => {
       if (block.bottom < this.canvas.height) {
-        block.speed += .01*(timestamp - prevTimestamp)
+        block.speed += .003*(timestamp - prevTimestamp)
         block.bottom += block.speed
         block.top = block.bottom - block.height
       } else {
