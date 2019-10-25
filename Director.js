@@ -1,4 +1,4 @@
-import { assign, rnd, log } from './helpers.js'
+import { assign, rnd, max, min, log } from './helpers.js'
 import Block from './Block.js'
 
 export default class Director {
@@ -17,7 +17,7 @@ export default class Director {
     this.blocks.forEach(block => {
       if (block.bottom < this.canvas.height) {
         block.speed += .003*(timestamp - prevTimestamp)
-        block.bottom += block.speed
+        block.bottom = min(block.bottom+block.speed, this.canvas.height)
         block.top = block.bottom - block.height
       } else {
         block.speed = 0

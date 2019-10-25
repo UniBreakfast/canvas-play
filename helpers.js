@@ -1,8 +1,4 @@
 
-export const log = console.log
-
-export const on = addEventListener
-
-export const assign = Object.assign
-
-export const rnd =(min, max)=> Math.floor(Math.random() * (max-min) + min)
+export const on = addEventListener, { log } = console, { assign } = Object, 
+           { min, max, round, floor, ceil, random } = Math,
+             rnd =(min, max)=> floor(random()*(max-min)+min)
